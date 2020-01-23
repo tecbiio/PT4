@@ -105,9 +105,9 @@ class Movement:
         tab[4,1,0] = tab[4,2,1]
         tab[4,2,0] = tab[4,2,2]
         tab[4,2,1] = tab[4,1,2]
-        tab[4,2,0] = tmp1
-        tab[4,1,0] = tmp2
-        tab[4,0,0] = tmp3
+        tab[4,0,2] = tmp1
+        tab[4,1,2] = tmp2
+        tab[4,2,2] = tmp3
 
     # Mouvement invUp face 0 (en face) : antihoraire arête haute
     def invUp(self, cube):
