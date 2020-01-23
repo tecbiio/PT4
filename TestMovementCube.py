@@ -1,6 +1,8 @@
 import RubiksCube
-import MovementCube2
+import MovementCube
 
 cube = RubiksCube.RubiksCube()
-mc = MovementCube2.Movement()
+mc = MovementCube.Movement()
+print(cube.getTab())
+mc.right(cube)
 print(cube.getTab())
