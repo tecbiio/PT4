@@ -10,35 +10,30 @@ class Movement:
         tmp1 = tab[0,0,2]
         tmp2 = tab[0,1,2]
         tmp3 = tab[0,2,2]
-
         tab[0,0,2] = tab[5,2,0]
         tab[0,1,2] = tab[5,1,0]
         tab[0,2,2] = tab[5,0,0]
-
         tab[5,0,0] = tab[2,0,0]
         tab[5,1,0] = tab[2,1,0]
         tab[5,2,0] = tab[2,2,0]
-
         tab[2,0,0] = tab[4,2,2]
         tab[2,1,0] = tab[4,1,2]
         tab[2,2,0] = tab[4,0,2]
-
         tab[4,0,2] = tmp3
         tab[4,1,2] = tmp2
         tab[4,2,2] = tmp1
-
         # Pivot face 1 sur elle-même
         tmp1 = tab[1,0,0]
         tmp2 = tab[1,0,1]
         tmp3 = tab[1,0,2]
         tab[1,0,1] = tab[1,1,0]
         tab[1,0,0] = tab[1,2,0]
-        tab[1,0,2] = tmp1
         tab[1,1,0] = tab[1,2,1]
         tab[1,2,0] = tab[1,2,2]
         tab[1,2,1] = tab[1,1,2]
-        tab[1,2,2] = tmp3
+        tab[1,0,2] = tmp1
         tab[1,1,2] = tmp2
+        tab[1,2,2] = tmp3
 
     # Mouvement invRight face 0 (en face) : antihoraire arête droite
     def invRight(self, cube):
@@ -52,31 +47,27 @@ class Movement:
         tmp1 = tab[0,0,0]
         tmp2 = tab[0,1,0]
         tmp3 = tab[0,2,0]
-
         tab[0,0,0] = tab[4,0,0]
         tab[0,1,0] = tab[4,1,0]
         tab[0,2,0] = tab[4,2,0]
-
-        tab[4,0,0] = tab[2,2,0]
-        tab[4,1,0] = tab[2,1,0]
-        tab[4,2,0] = tab[2,0,0]
-
-        tab[2,0,0] = tab[5,0,0]
-        tab[2,1,0] = tab[5,1,0]
-        tab[2,2,0] = tab[5,2,0]
-
-        tab[5,0,0] = tmp3
-        tab[5,1,0] = tmp2
-        tab[5,2,0] = tmp1
+        tab[4,0,0] = tab[2,0,2]
+        tab[4,1,0] = tab[2,1,2]
+        tab[4,2,0] = tab[2,2,2]
+        tab[2,0,2] = tab[5,0,2]
+        tab[2,1,2] = tab[5,1,2]
+        tab[2,2,2] = tab[5,2,2]
+        tab[5,2,2] = tmp1
+        tab[5,1,2] = tmp2
+        tab[5,0,2] = tmp3
         # Pivot face 3 sur elle-même
-        tmp1 = tab[1,0,0]
-        tmp2 = tab[1,0,1]
-        tmp3 = tab[1,0,2]
-        tab[1,0,1] = tab[1,1,0]
-        tab[1,0,0] = tab[1,2,0]
-        tab[1,0,2] = tmp1
-        tab[1,1,0] = tab[1,2,1]
-        tab[1,2,0] = tab[1,2,2]
-        tab[1,2,1] = tab[1,1,2]
-        tab[1,2,2] = tmp3
-        tab[1,1,2] = tmp2
+        tmp1 = tab[3,0,0]
+        tmp2 = tab[3,0,1]
+        tmp3 = tab[3,0,2]
+        tab[3,0,1] = tab[3,1,0]
+        tab[3,0,0] = tab[3,2,0]
+        tab[3,1,0] = tab[3,2,1]
+        tab[3,2,0] = tab[3,2,2]
+        tab[3,2,1] = tab[3,1,2]
+        tab[3,0,2] = tmp1
+        tab[3,1,2] = tmp2
+        tab[3,2,2] = tmp3
