@@ -100,11 +100,11 @@ class Movement:
         tmp1 = tab[4,0,0]
         tmp2 = tab[4,0,1]
         tmp3 = tab[4,0,2]
-        tab[4,0,1] = tab[4,1,2]
-        tab[4,0,2] = tab[4,2,2]
-        tab[4,1,2] = tab[4,2,1]
-        tab[4,2,2] = tab[4,2,0]
-        tab[4,2,1] = tab[4,1,0]
+        tab[4,0,1] = tab[4,1,0]
+        tab[4,0,0] = tab[4,2,0]
+        tab[4,1,0] = tab[4,2,1]
+        tab[4,2,0] = tab[4,2,2]
+        tab[4,2,1] = tab[4,1,2]
         tab[4,2,0] = tmp1
         tab[4,1,0] = tmp2
         tab[4,0,0] = tmp3
@@ -113,4 +113,3 @@ class Movement:
     def invUp(self, cube):
         for i in range(0,3):
             self.up(cube)
-            
