@@ -299,7 +299,167 @@ class Movement:
         tab[3,1,0] = tmp2
         tab[3,0,0] = tmp3
 
-    # Mouvement x de rotation horaire complète du cube suivant l'axe x
+    # Mouvement invX de rotation antihoraire complète du cube suivant l'axe x
     def invX(self, cube):
         for i in range(0,3):
             self.x(cube)
+
+    # Mouvement y de rotation horaire complète du cube suivant l'axe y
+    def y(self, cube):
+        tab = cube.getTab()
+        # Rotation faces 0,1,2 et 3
+        tmp1 = tab[0,0,0]
+        tmp2 = tab[0,0,1]
+        tmp3 = tab[0,0,2]
+        tmp4 = tab[0,1,0]
+        tmp5 = tab[0,1,1]
+        tmp6 = tab[0,1,2]
+        tmp7 = tab[0,2,0]
+        tmp8 = tab[0,2,1]
+        tmp9 = tab[0,2,2]
+        tab[0,0,0] = tab[1,2,2]
+        tab[0,0,1] = tab[1,2,1]
+        tab[0,0,2] = tab[1,2,0]
+        tab[0,1,0] = tab[1,1,2]
+        tab[0,1,1] = tab[1,1,1]
+        tab[0,1,2] = tab[1,1,0]
+        tab[0,2,0] = tab[1,0,2]
+        tab[0,2,1] = tab[1,0,1]
+        tab[0,2,2] = tab[1,0,0]
+        tab[1,2,2] = tab[2,2,2]
+        tab[1,2,1] = tab[2,2,1]
+        tab[1,2,0] = tab[2,2,0]
+        tab[1,1,2] = tab[2,1,2]
+        tab[1,1,1] = tab[2,1,1]
+        tab[1,1,0] = tab[2,1,0]
+        tab[1,0,2] = tab[2,0,2]
+        tab[1,0,1] = tab[2,0,1]
+        tab[1,0,0] = tab[2,0,0]
+        tab[2,2,2] = tab[3,0,0]
+        tab[2,2,1] = tab[3,0,1]
+        tab[2,2,0] = tab[3,0,2]
+        tab[2,1,2] = tab[3,1,0]
+        tab[2,1,1] = tab[3,1,1]
+        tab[2,1,0] = tab[3,1,2]
+        tab[2,0,2] = tab[3,2,0]
+        tab[2,0,1] = tab[3,2,1]
+        tab[2,0,0] = tab[3,2,2]
+        tab[3,0,0] = tmp1
+        tab[3,0,1] = tmp2
+        tab[3,0,2] = tmp3
+        tab[3,1,0] = tmp4
+        tab[3,1,1] = tmp5
+        tab[3,1,2] = tmp6
+        tab[3,2,0] = tmp7
+        tab[3,2,1] = tmp8
+        tab[3,2,2] = tmp9
+        # Pivot faces 4 et 5 sur elles-même
+        # Pivot face 4 horaire
+        tmp1 = tab[4,0,0]
+        tmp2 = tab[4,0,1]
+        tmp3 = tab[4,0,2]
+        tab[4,0,1] = tab[4,1,0]
+        tab[4,0,0] = tab[4,2,0]
+        tab[4,1,0] = tab[4,2,1]
+        tab[4,2,0] = tab[4,2,2]
+        tab[4,2,1] = tab[4,1,2]
+        tab[4,0,2] = tmp1
+        tab[4,1,2] = tmp2
+        tab[4,2,2] = tmp3
+        # Pivot face 5 antihoraire
+        tmp1 = tab[5,0,0]
+        tmp2 = tab[5,0,1]
+        tmp3 = tab[5,0,2]
+        tab[5,0,1] = tab[5,1,2]
+        tab[5,0,2] = tab[5,2,2]
+        tab[5,1,2] = tab[5,2,1]
+        tab[5,2,2] = tab[5,2,0]
+        tab[5,2,1] = tab[5,1,0]
+        tab[5,2,0] = tmp1
+        tab[5,1,0] = tmp2
+        tab[5,0,0] = tmp3
+
+    # Mouvement invY de rotation antihoraire complète du cube suivant l'axe y
+    def invY(self, cube):
+        for i in range(0,3):
+            self.y(cube)
+
+    # Mouvement z de rotation horaire complète du cube suivant l'axe z
+    def z(self, cube):
+        tab = cube.getTab()
+        # Rotation faces 1,5,3 et 4
+        tmp1 = tab[1,0,0]
+        tmp2 = tab[1,0,1]
+        tmp3 = tab[1,0,2]
+        tmp4 = tab[1,1,0]
+        tmp5 = tab[1,1,1]
+        tmp6 = tab[1,1,2]
+        tmp7 = tab[1,2,0]
+        tmp8 = tab[1,2,1]
+        tmp9 = tab[1,2,2]
+        tab[1,0,0] = tab[5,2,2]
+        tab[1,0,1] = tab[5,2,1]
+        tab[1,0,2] = tab[5,2,0]
+        tab[1,1,0] = tab[5,1,2]
+        tab[1,1,1] = tab[5,1,1]
+        tab[1,1,2] = tab[5,1,0]
+        tab[1,2,0] = tab[5,0,2]
+        tab[1,2,1] = tab[5,0,1]
+        tab[1,2,2] = tab[5,0,0]
+        tab[5,2,2] = tab[3,2,2]
+        tab[5,2,1] = tab[3,2,1]
+        tab[5,2,0] = tab[3,2,0]
+        tab[5,1,2] = tab[3,1,2]
+        tab[5,1,1] = tab[3,1,1]
+        tab[5,1,0] = tab[3,1,0]
+        tab[5,0,2] = tab[3,0,2]
+        tab[5,0,1] = tab[3,0,1]
+        tab[5,0,0] = tab[3,0,0]
+        tab[3,2,2] = tab[4,0,0]
+        tab[3,2,1] = tab[4,0,1]
+        tab[3,2,0] = tab[4,0,2]
+        tab[3,1,2] = tab[4,1,0]
+        tab[3,1,1] = tab[4,1,1]
+        tab[3,1,0] = tab[4,1,2]
+        tab[3,0,2] = tab[4,2,0]
+        tab[3,0,1] = tab[4,2,1]
+        tab[3,0,0] = tab[4,2,2]
+        tab[4,0,0] = tmp1
+        tab[4,0,1] = tmp2
+        tab[4,0,2] = tmp3
+        tab[4,1,0] = tmp4
+        tab[4,1,1] = tmp5
+        tab[4,1,2] = tmp6
+        tab[4,2,0] = tmp7
+        tab[4,2,1] = tmp8
+        tab[4,2,2] = tmp9
+        # Pivot faces 0 et 2 sur elles-même
+        # Pivot face 0 horaire
+        tmp1 = tab[0,0,0]
+        tmp2 = tab[0,0,1]
+        tmp3 = tab[0,0,2]
+        tab[0,0,1] = tab[0,1,0]
+        tab[0,0,0] = tab[0,2,0]
+        tab[0,1,0] = tab[0,2,1]
+        tab[0,2,0] = tab[0,2,2]
+        tab[0,2,1] = tab[0,1,2]
+        tab[0,0,2] = tmp1
+        tab[0,1,2] = tmp2
+        tab[0,2,2] = tmp3
+        # Pivot face 2 antihoraire
+        tmp1 = tab[2,0,0]
+        tmp2 = tab[2,0,1]
+        tmp3 = tab[2,0,2]
+        tab[2,0,1] = tab[2,1,2]
+        tab[2,0,2] = tab[2,2,2]
+        tab[2,1,2] = tab[2,2,1]
+        tab[2,2,2] = tab[2,2,0]
+        tab[2,2,1] = tab[2,1,0]
+        tab[2,2,0] = tmp1
+        tab[2,1,0] = tmp2
+        tab[2,0,0] = tmp3
+
+    # Mouvement invZ de rotation antihoraire complète du cube suivant l'axe z
+    def invZ(self, cube):
+        for i in range(0,3):
+            self.z(cube)
