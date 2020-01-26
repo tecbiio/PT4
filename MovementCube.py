@@ -19,9 +19,9 @@ class Movement:
         tab[2,0,0] = tab[4,2,2]
         tab[2,1,0] = tab[4,1,2]
         tab[2,2,0] = tab[4,0,2]
-        tab[4,0,2] = tmp3
+        tab[4,0,2] = tmp1
         tab[4,1,2] = tmp2
-        tab[4,2,2] = tmp1
+        tab[4,2,2] = tmp3
         # Pivot face 1 sur elle-même
         tmp1 = tab[1,0,0]
         tmp2 = tab[1,0,1]
@@ -50,9 +50,9 @@ class Movement:
         tab[0,0,0] = tab[4,0,0]
         tab[0,1,0] = tab[4,1,0]
         tab[0,2,0] = tab[4,2,0]
-        tab[4,0,0] = tab[2,0,2]
+        tab[4,0,0] = tab[2,2,2]
         tab[4,1,0] = tab[2,1,2]
-        tab[4,2,0] = tab[2,2,2]
+        tab[4,2,0] = tab[2,0,2]
         tab[2,0,2] = tab[5,0,2]
         tab[2,1,2] = tab[5,1,2]
         tab[2,2,2] = tab[5,2,2]
@@ -170,18 +170,18 @@ class Movement:
         tmp1 = tab[1,0,0]
         tmp2 = tab[1,1,0]
         tmp3 = tab[1,2,0]
-        tab[1,0,0] = tab[4,0,0]
-        tab[1,1,0] = tab[4,1,0]
-        tab[1,2,0] = tab[4,2,0]
-        tab[4,0,0] = tab[3,0,2]
-        tab[4,1,0] = tab[3,1,2]
+        tab[1,0,0] = tab[4,2,0]
+        tab[1,1,0] = tab[4,2,1]
+        tab[1,2,0] = tab[4,2,2]
         tab[4,2,0] = tab[3,2,2]
-        tab[3,0,2] = tab[5,0,2]
-        tab[3,1,2] = tab[5,1,2]
-        tab[2,2,2] = tab[5,2,2]
-        tab[5,2,2] = tmp1
-        tab[5,1,2] = tmp2
-        tab[5,0,2] = tmp3
+        tab[4,2,1] = tab[3,1,2]
+        tab[4,2,2] = tab[3,0,2]
+        tab[3,2,2] = tab[5,2,0]
+        tab[3,1,2] = tab[5,2,1]
+        tab[3,0,2] = tab[5,2,2]
+        tab[5,2,0] = tmp1
+        tab[5,2,1] = tmp2
+        tab[5,2,2] = tmp3
 
     # Mouvement invFront face 0 (en face) : antihoraire face avant
     def invFront(self, cube):
@@ -190,6 +190,7 @@ class Movement:
 
     # Mouvement back face 0 (en face) : horaire face arrière
     def back(self, cube):
+        tab = cube.getTab()
         # Pivot face 2 sur elle-même
         tmp1 = tab[2,0,0]
         tmp2 = tab[2,0,1]
@@ -206,18 +207,18 @@ class Movement:
         tmp1 = tab[1,0,2]
         tmp2 = tab[1,1,2]
         tmp3 = tab[1,2,2]
-        tab[1,0,2] = tab[5,2,0]
-        tab[1,1,2] = tab[5,1,0]
-        tab[1,2,2] = tab[5,0,0]
-        tab[5,0,0] = tab[3,0,0]
-        tab[5,1,0] = tab[3,1,0]
-        tab[5,2,0] = tab[3,2,0]
-        tab[3,0,0] = tab[4,2,2]
-        tab[3,1,0] = tab[4,1,2]
-        tab[3,2,0] = tab[4,0,2]
+        tab[1,0,2] = tab[5,0,0]
+        tab[1,1,2] = tab[5,0,1]
+        tab[1,2,2] = tab[5,0,2]
+        tab[5,0,2] = tab[3,0,0]
+        tab[5,0,1] = tab[3,1,0]
+        tab[5,0,0] = tab[3,2,0]
+        tab[3,0,0] = tab[4,0,2]
+        tab[3,1,0] = tab[4,0,1]
+        tab[3,2,0] = tab[4,0,0] #
+        tab[4,0,0] = tmp1
+        tab[4,0,1] = tmp2
         tab[4,0,2] = tmp3
-        tab[4,1,2] = tmp2
-        tab[4,2,2] = tmp1
 
     # Mouvement invBack face 0 (en face) : antihoraire face arrière
     def invBack(self, cube):
@@ -387,7 +388,7 @@ class Movement:
     # Mouvement z de rotation horaire complète du cube suivant l'axe z
     def z(self, cube):
         tab = cube.getTab()
-        # Rotation faces 1,5,3 et 4
+        # Rotation faces 1,4,3 et 5
         tmp1 = tab[1,0,0]
         tmp2 = tab[1,0,1]
         tmp3 = tab[1,0,2]
@@ -397,42 +398,42 @@ class Movement:
         tmp7 = tab[1,2,0]
         tmp8 = tab[1,2,1]
         tmp9 = tab[1,2,2]
-        tab[1,0,0] = tab[5,2,2]
-        tab[1,0,1] = tab[5,2,1]
-        tab[1,0,2] = tab[5,2,0]
-        tab[1,1,0] = tab[5,1,2]
-        tab[1,1,1] = tab[5,1,1]
-        tab[1,1,2] = tab[5,1,0]
-        tab[1,2,0] = tab[5,0,2]
-        tab[1,2,1] = tab[5,0,1]
-        tab[1,2,2] = tab[5,0,0]
-        tab[5,2,2] = tab[3,2,2]
-        tab[5,2,1] = tab[3,2,1]
-        tab[5,2,0] = tab[3,2,0]
-        tab[5,1,2] = tab[3,1,2]
-        tab[5,1,1] = tab[3,1,1]
-        tab[5,1,0] = tab[3,1,0]
-        tab[5,0,2] = tab[3,0,2]
-        tab[5,0,1] = tab[3,0,1]
-        tab[5,0,0] = tab[3,0,0]
-        tab[3,2,2] = tab[4,0,0]
-        tab[3,2,1] = tab[4,0,1]
-        tab[3,2,0] = tab[4,0,2]
-        tab[3,1,2] = tab[4,1,0]
-        tab[3,1,1] = tab[4,1,1]
-        tab[3,1,0] = tab[4,1,2]
-        tab[3,0,2] = tab[4,2,0]
-        tab[3,0,1] = tab[4,2,1]
-        tab[3,0,0] = tab[4,2,2]
-        tab[4,0,0] = tmp1
-        tab[4,0,1] = tmp2
-        tab[4,0,2] = tmp3
-        tab[4,1,0] = tmp4
-        tab[4,1,1] = tmp5
-        tab[4,1,2] = tmp6
-        tab[4,2,0] = tmp7
-        tab[4,2,1] = tmp8
-        tab[4,2,2] = tmp9
+        tab[1,0,0] = tab[4,2,2]
+        tab[1,0,1] = tab[4,2,1]
+        tab[1,0,2] = tab[4,2,0]
+        tab[1,1,0] = tab[4,1,2]
+        tab[1,1,1] = tab[4,1,1]
+        tab[1,1,2] = tab[4,1,0]
+        tab[1,2,0] = tab[4,0,2]
+        tab[1,2,1] = tab[4,0,1]
+        tab[1,2,2] = tab[4,0,0]
+        tab[4,2,2] = tab[3,2,2]
+        tab[4,2,1] = tab[3,2,1]
+        tab[4,2,0] = tab[3,2,0]
+        tab[4,1,2] = tab[3,1,2]
+        tab[4,1,1] = tab[3,1,1]
+        tab[4,1,0] = tab[3,1,0]
+        tab[4,0,2] = tab[3,0,2]
+        tab[4,0,1] = tab[3,0,1]
+        tab[4,0,0] = tab[3,0,0]
+        tab[3,2,2] = tab[5,0,0]
+        tab[3,2,1] = tab[5,0,1]
+        tab[3,2,0] = tab[5,0,2]
+        tab[3,1,2] = tab[5,1,0]
+        tab[3,1,1] = tab[5,1,1]
+        tab[3,1,0] = tab[5,1,2]
+        tab[3,0,2] = tab[5,2,0]
+        tab[3,0,1] = tab[5,2,1]
+        tab[3,0,0] = tab[5,2,2]
+        tab[5,0,0] = tmp1
+        tab[5,0,1] = tmp2
+        tab[5,0,2] = tmp3
+        tab[5,1,0] = tmp4
+        tab[5,1,1] = tmp5
+        tab[5,1,2] = tmp6
+        tab[5,2,0] = tmp7
+        tab[5,2,1] = tmp8
+        tab[5,2,2] = tmp9
         # Pivot faces 0 et 2 sur elles-même
         # Pivot face 0 horaire
         tmp1 = tab[0,0,0]
