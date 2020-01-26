@@ -11,7 +11,7 @@ Les fonctions de mouvements ne font que déplacer des couleurs, la face 0 peut d
 # Fichier MovementCube.py  
 ## Fonctions de mouvements numériquement :     
 ### Rotation d'une face du cube dans l'espace      
-- right, left, up, down, front, back (mouvements horaires)
+- right, left, up, down, front, back  
 - leurs opposés (mouvements antihoraires)
 ### Rotations complètes du cube dans l'espace   
 - x, y, z
@@ -23,12 +23,12 @@ Test de la bonne fonctionnalité des fonctions implémentées dans le précéden
 # Fichier MovementRobot.py
 ## Fonctions de mouvements physiquement :
 ### Rotation d'une face du cube dans l'espace     
-- right, left, up, down, front, back (mouvements horaires)
+- right, left, up, down, front, back 
 - leurs opposés (mouvements antihoraires)
 ### Rotations complètes du cube dans l'espace
 - x, y, z
 - leurs opposés (mouvements antihoraires)
-   
+
 # Fichier TestMovementRobot.py
 Test de la bonne fonctionnalité des fonctions implémentées dans le précédent fichier
 (déjà effectuée)   
