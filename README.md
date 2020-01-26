@@ -8,30 +8,30 @@ On ne traite que des mouvements avec la face 0 car le robot ne les effectue qu'a
 
 Les fonctions de mouvements ne font que déplacer des couleurs, la face 0 peut donc être verte, bleu, rouge, orange, blanche ou encore jaune (la couleur centrale de coordonnées (1,1) correspond à la couleur de la face)   
 
-## Fichier MovementCube.py  
+# Fichier MovementCube.py  
 Fonctions de mouvements numériquement :        
 - right, left, up, down, front, back (mouvements horaires)
 - leurs opposés (mouvements antihoraires)
-# Rotation d'une face du cube dans l'espace   
+## Rotation d'une face du cube dans l'espace   
 - x, y, z
 - leurs opposés (mouvements antihoraires)
-# Rotations complètes du cube dans l'espace   
+## Rotations complètes du cube dans l'espace   
 
-## Fichier TestMovementCube.py
+# Fichier TestMovementCube.py
 Test de la bonne fonctionnalité des fonctions implémentées dans le précédent fichier   
 
-## Fichier MovementRobot.py
+# Fichier MovementRobot.py
 Fonctions de mouvements physiquement :    
 - right, left, up, down, front, back (mouvements horaires)
 - leurs opposés (mouvements antihoraires)
-# Rotation d'une face du cube dans l'espace   
+## Rotation d'une face du cube dans l'espace   
 - x, y, z
 - leurs opposés (mouvements antihoraires)
-# Rotations complètes du cube dans l'espace   
+## Rotations complètes du cube dans l'espace   
 
-## Fichier TestMovementRobot.py
+# Fichier TestMovementRobot.py
 Test de la bonne fonctionnalité des fonctions implémentées dans le précédent fichier
 (déjà effectuée)   
 
-## Fichier RubiksCube.py
+# Fichier RubiksCube.py
 Objet représentant un cube sous forme d'un tableau à trois dimensions représentant les couleurs sur chaque faces   
