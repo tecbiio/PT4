@@ -151,6 +151,79 @@ class Movement:
         for i in range(0,3):
             self.down(cube)
 
+    # Mouvement front face 0 (en face) : horaire face avant
+    def front(self, cube):
+        tab = cube.getTab()
+        # Pivot face 0 sur elle-même
+        tmp1 = tab[0,0,0]
+        tmp2 = tab[0,0,1]
+        tmp3 = tab[0,0,2]
+        tab[0,0,1] = tab[0,1,0]
+        tab[0,0,0] = tab[0,2,0]
+        tab[0,1,0] = tab[0,2,1]
+        tab[0,2,0] = tab[0,2,2]
+        tab[0,2,1] = tab[0,1,2]
+        tab[0,0,2] = tmp1
+        tab[0,1,2] = tmp2
+        tab[0,2,2] = tmp3
+        # Rotation arête gauche face 1
+        tmp1 = tab[1,0,0]
+        tmp2 = tab[1,1,0]
+        tmp3 = tab[1,2,0]
+        tab[1,0,0] = tab[4,0,0]
+        tab[1,1,0] = tab[4,1,0]
+        tab[1,2,0] = tab[4,2,0]
+        tab[4,0,0] = tab[3,0,2]
+        tab[4,1,0] = tab[3,1,2]
+        tab[4,2,0] = tab[3,2,2]
+        tab[3,0,2] = tab[5,0,2]
+        tab[3,1,2] = tab[5,1,2]
+        tab[2,2,2] = tab[5,2,2]
+        tab[5,2,2] = tmp1
+        tab[5,1,2] = tmp2
+        tab[5,0,2] = tmp3
+
+    # Mouvement invFront face 0 (en face) : antihoraire face avant
+    def invFront(self, cube):
+        for i in range(0,3):
+            self.front(cube)
+
+    # Mouvement back face 0 (en face) : horaire face arrière
+    def back(self, cube):
+        # Pivot face 2 sur elle-même
+        tmp1 = tab[2,0,0]
+        tmp2 = tab[2,0,1]
+        tmp3 = tab[2,0,2]
+        tab[2,0,1] = tab[2,1,0]
+        tab[2,0,0] = tab[2,2,0]
+        tab[2,1,0] = tab[2,2,1]
+        tab[2,2,0] = tab[2,2,2]
+        tab[2,2,1] = tab[2,1,2]
+        tab[2,0,2] = tmp1
+        tab[2,1,2] = tmp2
+        tab[2,2,2] = tmp3
+        # Rotation arête droite face 1
+        tmp1 = tab[1,0,2]
+        tmp2 = tab[1,1,2]
+        tmp3 = tab[1,2,2]
+        tab[1,0,2] = tab[5,2,0]
+        tab[1,1,2] = tab[5,1,0]
+        tab[1,2,2] = tab[5,0,0]
+        tab[5,0,0] = tab[3,0,0]
+        tab[5,1,0] = tab[3,1,0]
+        tab[5,2,0] = tab[3,2,0]
+        tab[3,0,0] = tab[4,2,2]
+        tab[3,1,0] = tab[4,1,2]
+        tab[3,2,0] = tab[4,0,2]
+        tab[4,0,2] = tmp3
+        tab[4,1,2] = tmp2
+        tab[4,2,2] = tmp1
+
+    # Mouvement invBack face 0 (en face) : antihoraire face arrière
+    def invBack(self, cube):
+        for i in range(0,3):
+            self.back(cube)
+
     # Mouvement x de rotation horaire complète du cube suivant l'axe x
     def x(self, cube):
         tab = cube.getTab()

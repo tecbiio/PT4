@@ -18,3 +18,6 @@ class RubiksCube:
 
     def getValTab(self, index1, index2, index3):
         return self.__tab[index1, index2, index3]
+
+    def setValTab(self, index1, index2, index3, val):
+        self.__tab[index1, index2, index3] = val
