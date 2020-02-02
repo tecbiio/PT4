@@ -1,0 +1,9 @@
+https://ruwix.com/the-rubiks-cube/how-to-solve-the-rubiks-cube-beginners-method/
+
+White cross
+White corners
+Second layer
+Yellow cross
+Yellow edges
+Permute corners
+Orient corners
