@@ -1,12 +1,3 @@
-Placement des coté blanc
-Vérification des bon cotés blanc aux bonnes faces
-Coin blanc
-2eme couronne
-croix jaune
-Vérification des bon cotés jaunes aux bonne faces
-Rotation des coins juanes
-Orientation des coins jaunes
-
 https://ruwix.com/the-rubiks-cube/how-to-solve-the-rubiks-cube-beginners-method/
 
 White cross
