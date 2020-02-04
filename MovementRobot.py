@@ -122,6 +122,48 @@ class Movement():
 
     # Mouvement x de rotation horaire complète du cube suivant l'axe x
     def x(self, servo):
+    	servo.setTarget(0, 10000) #desenclenchement
+    	servo.setTarget(4, 10000)
+    	time.sleep(1)
+    	servo.setTarget(3, 1000) #rotation
+    	servo.setTarget(7, 10000)
+    	time.sleep(1)
+    	servo.setTarget(0, 1000) #enclenchement
+    	servo.setTarget(4, 1000)
+    	time.sleep(1)
+    	servo.setTarget(2, 10000) #desenclechement
+    	servo.setTarget(6, 10000)
+    	time.sleep(1)
+    	servo.setTarget(3, 5750) #remise position milieu
+    	servo.setTarget(7, 6250)
+    	time.sleep(1)
+    	servo.setTarget(2, 1000) #enclenchement
+    	servo.setTarget(6, 1000)
+    	time.sleep(1)
+
+    # Mouvement invX de rotation antihoraire complète du cube suivant l'axe x
+    def invX(self, servo):
+    	servo.setTarget(0, 10000)
+    	servo.setTarget(4, 10000)
+    	time.sleep(1)
+    	servo.setTarget(3, 10000)
+    	servo.setTarget(7, 1000)
+    	time.sleep(1)
+    	servo.setTarget(0, 1000)
+    	servo.setTarget(4, 1000)
+    	time.sleep(1)
+    	servo.setTarget(2, 10000)
+    	servo.setTarget(6, 10000)
+    	time.sleep(1)
+    	servo.setTarget(3, 5750)
+    	servo.setTarget(7, 6250)
+    	time.sleep(1)
+    	servo.setTarget(2, 1000)
+    	servo.setTarget(6, 1000)
+    	time.sleep(1)
+    	
+    # Mouvement y de rotation horaire complète du cube suivant l'axe y
+    def y(self, servo):
     	servo.setTarget(2, 10000)
     	servo.setTarget(6, 10000)
     	time.sleep(1)
@@ -141,29 +183,25 @@ class Movement():
     	servo.setTarget(4, 1000)
     	time.sleep(1)
 
-    # Mouvement invX de rotation antihoraire complète du cube suivant l'axe x
-
-    # Mouvement y de rotation horaire complète du cube suivant l'axe y
-    def y(self, servo):
-    	servo.setTarget(0, 10000)
-    	servo.setTarget(4, 10000)
-    	time.sleep(1)
-    	servo.setTarget(3, 10000)
-    	servo.setTarget(7, 1000)
-    	time.sleep(1)
-    	servo.setTarget(0, 1000)
-    	servo.setTarget(4, 1000)
-    	time.sleep(1)
+    # Mouvement invY de rotation antihoraire complète du cube suivant l'axe y
+    def invY(self, servo):
     	servo.setTarget(2, 10000)
     	servo.setTarget(6, 10000)
     	time.sleep(1)
-    	servo.setTarget(3, 5750)
-    	servo.setTarget(7, 6250)
+    	servo.setTarget(1, 1000)
+    	servo.setTarget(5, 10000)
     	time.sleep(1)
     	servo.setTarget(2, 1000)
     	servo.setTarget(6, 1000)
     	time.sleep(1)
-
-    # Mouvement invY de rotation antihoraire complète du cube suivant l'axe y
+    	servo.setTarget(0, 10000)
+    	servo.setTarget(4, 10000)
+    	time.sleep(1)
+    	servo.setTarget(1, 5750)
+    	servo.setTarget(5, 5750)
+    	time.sleep(1)
+    	servo.setTarget(0, 1000)
+    	servo.setTarget(4, 1000)
+    	time.sleep(1)
     # Mouvement z de rotation horaire complète du cube suivant l'axe z
     # Mouvement invZ de rotation antihoraire complète du cube suivant l'axe z
