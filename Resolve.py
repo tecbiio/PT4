@@ -1,5 +1,5 @@
 import RubiksCube
-import Movement
+import Movement as move
 
 class Resolve():
 
