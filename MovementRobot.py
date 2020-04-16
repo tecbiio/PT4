@@ -161,7 +161,7 @@ class Movement():
     	servo.setTarget(2, 1000)
     	servo.setTarget(6, 1000)
     	time.sleep(1)
-    	
+
     # Mouvement y de rotation horaire complète du cube suivant l'axe y
     def y(self, servo):
     	servo.setTarget(2, 10000)
