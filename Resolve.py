@@ -351,24 +351,84 @@ class Resolve():
 
         if (cube.getEdges()[4][0] == 4): # Arête blanche (4,0,1)
             if (cube.getEdges()[2][0] == 0): # Arête blanc/vert
+                move.back(cube)
+                move.invUp(cube)
+                move.left(cube)
+                move.left(cube)
+                move.up(cube)
+                move.front(cube)
             if (cube.getEdges()[2][0] == 1): # Arête blanc/rouge
+                move.invBack(cube)
+                move.invRight(cube)
+                move.invRight(cube)
+                move.up(cube)
+                move.invFront(cube)
+                move.invUp(cube)
             # if (cube.getEdges()[2][0] == 2): # Arête blanc/bleu
             if (cube.getEdges()[2][0] == 3): # Arête blanc/orange
+                move.back(cube)
+                move.left(cube)
+                move.left(cube)
+                move.invUp(cube)
+                move.front(cube)
+                move.up(cube)
         if (cube.getEdges()[4][1] == 4): # Arête blanche (4,1,0)
             if (cube.getEdges()[3][0] == 0): # Arête blanc/vert
+                move.invLeft(cube)
+                move.up(cube)
+                move.left(cube)
+                move.invUp(cube)
             if (cube.getEdges()[3][0] == 1): # Arête blanc/rouge
+                move.left(cube)
+                move.up(cube)
+                move.up(cube)
+                move.invLeft(cube)
+                move.invUp(cube)
+                move.invUp(cube)
             if (cube.getEdges()[3][0] == 2): # Arête blanc/bleu
+                move.left(cube)
+                move.invUp(cube)
+                move.invLeft(cube)
+                move.up(cube)
             # if (cube.getEdges()[3][0] == 3): # Arête blanc/orange
         if (cube.getEdges()[4][2] == 4): # Arête blanche (4,2,1)
             # if (cube.getEdges()[0][0] == 0): # Arête blanc/vert
             if (cube.getEdges()[0][0] == 1): # Arête blanc/rouge
+                move.invFront(cube)
+                move.up(cube)
+                move.front(cube)
+                move.invUp(cube)
             if (cube.getEdges()[0][0] == 2): # Arête blanc/bleu
+                move.front(cube)
+                move.up(cube)
+                move.up(cube)
+                move.invFront(cube)
+                move.up(cube)
+                move.up(cube)
             if (cube.getEdges()[0][0] == 3): # Arête blanc/orange
+                move.invFront(cube)
+                move.invUp(cube)
+                move.front(cube)
+                move.up(cube)
         if (cube.getEdges()[4][3] == 4): # Arête blanche (4,1,2)
             if (cube.getEdges()[1][0] == 0): # Arête blanc/vert
+                move.invRight(cube)
+                move.invUp(cube)
+                move.right(cube)
+                move.up(cube)
             # if (cube.getEdges()[1][0] == 1): # Arête blanc/rouge
             if (cube.getEdges()[1][0] == 2): # Arête blanc/bleu
+                move.invRight(cube)
+                move.up(cube)
+                move.right(cube)
+                move.invUp(cube)
             if (cube.getEdges()[1][0] == 3): # Arête blanc/orange
+                move.invRight(cube)
+                move.invUp(cube)
+                move.invUp(cube)
+                move.right(cube)
+                move.up(cube)
+                move.up(cube)
 
         """ FACE JAUNE """
 
