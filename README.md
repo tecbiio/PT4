@@ -18,7 +18,7 @@ LES COULEURS N'ONT AUCUN IMPACT SUR LE TRAITEMENT DES MOUVEMENTS
 
 On ne traite que des mouvements avec la face 0 car le robot ne les effectue qu'avec celle là
 
-Avec la résolution du cube, on place le Rubik's Cube de façon à :
+Avec la résolution du cube, on place le Rubik's Cube de façon à que :
 - La face verte soit en face (0)
 - La face rouge soit à droite (1)
 - La face bleue soit derrière (2)
