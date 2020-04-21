@@ -594,9 +594,26 @@ class Resolve():
                 move.down(cube)
         if (cube.getCorners()[0][2] == 4): # Coin (0,2,2) blanc-?-?
             if (cube.getCorners()[5][1] == 0): # Coin (5,2,0) blanc-vert-rouge
+                move.invDown(cube)
+                move.invRight(cube)
+                move.down(cube)
+                move.right(cube)
             if (cube.getCorners()[5][1] == 1): # Coin (5,2,0) blanc-rouge-bleu
+                move.invBack(cube)
+                move.down(cube)
+                move.back(cube)
+                move.invDown(cube)
             if (cube.getCorners()[5][1] == 2): # Coin (5,2,0) blanc-bleu-orange
+                move.invLeft(cube)
+                move.down(cube)
+                move.down(cube)
+                move.left(cube)
             if (cube.getCorners()[5][1] == 3): # Coin (5,2,0) blanc-orange-vert
+                move.down(cube)
+                move.invFront(cube)
+                move.invDown(cube)
+                move.invDown(cube)
+                move.front(cube)
         if (cube.getCorners()[0][3] == 4): # Coin (0,0,2) blanc-?-?
             if (cube.getCorners()[4][2] == 0): # Coin (4,2,2) blanc-vert-orange
             if (cube.getCorners()[4][2] == 1): # Coin (4,2,2) blanc-rouge-vert

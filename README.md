@@ -65,12 +65,12 @@ Avec la résolution du cube, on place le Rubik's Cube de façon à :
 
 # Fichier Resolve.py
 ## Fonctions d'algorithmes de résolution :
-- solve() : Résoud le Rubik's Cube
+- solve() : Résoud le Rubik's Cube (Appel de toutes les autres fonctions)
 - posCube() : Positionne le Rubik's Cube avec le placement des faces par défaut
 - whiteCross() : Effectue la croix blanche
 - whiteFace() : Effectue la face blanche
-- crown() : Effectue la deuxième couronne (non implémenté)
+- crown() : Effectue la deuxième couronne (Non Implémenté)
 - yellowCrossOne() : Effectue la croix jaune (Non Implémenté)
 - yellowCrossTwo() : Effectue la croix jaune avec les bonnes arêtes (NI)
-- yellowCorners() : Place les coins jaunes
-- yellowFace() : Effectue la face jaune 
+- yellowCorners() : Place les coins jaunes (NI)
+- yellowFace() : Effectue la face jaune (NI)
