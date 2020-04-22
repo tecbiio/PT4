@@ -74,3 +74,6 @@ Avec la résolution du cube, on place le Rubik's Cube de façon à que :
 - yellowCrossTwo() : Effectue la croix jaune avec les bonnes arêtes (NI)
 - yellowCorners() : Place les coins jaunes (NI)
 - yellowFace() : Effectue la face jaune (NI)
+
+# Fichier maestro.py
+## Fichier de librairie servant à controller le robot 
