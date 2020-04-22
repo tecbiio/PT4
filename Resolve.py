@@ -703,13 +703,59 @@ class Resolve():
                 move.invBack(cube)
         if (cube.getCorners()[1][2] == 4): # Coin (1,2,2) blanc-?-?
             if (cube.getCorners()[5][0] == 0): # Coin (5,0,0) blanc-vert-rouge
+                move.down(cube)
+                move.down(cube)
+                move.invRight(cube)
+                move.down(cube)
+                move.right(cube)
             if (cube.getCorners()[5][0] == 1): # Coin (5,0,0) blanc-rouge-bleu
+                move.invDown(cube)
+                move.invBack(cube)
+                move.down(cube)
+                move.back(cube)
             if (cube.getCorners()[5][0] == 2): # Coin (5,0,0) blanc-bleu-orange
+                move.invLeft(cube)
+                move.down(cube)
+                move.left(cube)
             if (cube.getCorners()[5][0] == 3): # Coin (5,0,0) blanc-orange-vert
+                move.down(cube)
+                move.invFront(cube)
+                move.down(cube)
+                move.front(cube)
         if (cube.getCorners()[1][3] == 4): # Coin (1,0,2) blanc-?-?
             if (cube.getCorners()[4][3] == 0): # Coin (4,0,2) blanc-vert-orange
+
             if (cube.getCorners()[4][3] == 1): # Coin (4,0,2) blanc-rouge-vert
+                move.invBack(cube)
+                move.invDown(cube)
+                move.back(cube)
+                move.invRight(cube)
+                move.invDown(cube)
+                move.right(cube)
+                move.down(cube)
+                move.invRight(cube)
+                move.invDown(cube)
+                move.right(cube)
+                move.down(cube)
+                move.invRight(cube)
+                move.invDown(cube)
+                move.right(cube)
             if (cube.getCorners()[4][3] == 2): # Coin (4,0,2) blanc-bleu-rouge
+                move.invBack(cube)
+                move.invDown(cube)
+                move.back(cube)
+                move.down(cube)
+                move.invBack(cube)
+                move.invDown(cube)
+                move.back(cube)
+                move.down(cube)
+                move.invBack(cube)
+                move.invDown(cube)
+                move.back(cube)
+                move.down(cube)
+                move.invBack(cube)
+                move.invDown(cube)
+                move.back(cube)
             if (cube.getCorners()[4][3] == 3): # Coin (4,0,2) blanc-orange-bleu
 
         """ FACE BLEUE """
