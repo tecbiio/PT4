@@ -824,22 +824,94 @@ class Resolve():
                 move.invBack(cube)
         if (cube.getCorners()[2][2] == 4): # Coin (2,2,2) blanc-?-?
             if (cube.getCorners()[5][3] == 0): # Coin (5,0,2) blanc-vert-rouge
+                move.down(cube)
+                move.invRight(cube)
+                move.down(cube)
+                move.right(cube)
             if (cube.getCorners()[5][3] == 1): # Coin (5,0,2) blanc-rouge-bleu
+                move.down(cube)
+                move.invBack(cube)
+                move.down(cube)
+                move.down(cube)
+                move.back(cube)
             if (cube.getCorners()[5][3] == 2): # Coin (5,0,2) blanc-bleu-orange
+                move.invDown(cube)
+                move.invLeft(cube)
+                move.down(cube)
+                move.left(cube)
             if (cube.getCorners()[5][3] == 3): # Coin (5,0,2) blanc-orange-vert
+                move.invFront(cube)
+                move.down(cube)
+                move.front(cube)
         if (cube.getCorners()[2][3] == 4): # Coin (2,0,2) blanc-?-?
             if (cube.getCorners()[4][0] == 0): # Coin (4,0,0) blanc-vert-orange
+                move.invLeft(cube)
+                move.down(cube)
+                move.left(cube)
+                move.invFront(cube)
+                move.down(cube)
+                move.front(cube)
             if (cube.getCorners()[4][0] == 1): # Coin (4,0,0) blanc-rouge-vert
+                move.invLeft(cube)
+                move.down(cube)
+                move.left(cube)
+                move.down(cube)
+                move.invRight(cube)
+                move.down(cube)
+                move.right(cube)
             if (cube.getCorners()[4][0] == 2): # Coin (4,0,0) blanc-bleu-rouge
+                move.invLeft(cube)
+                move.down(cube)
+                move.left(cube)
+                move.invDown(cube)
+                move.invDown(cube)
+                move.invBack(cube)
+                move.down(cube)
+                move.back(cube)
             if (cube.getCorners()[4][0] == 3): # Coin (4,0,0) blanc-orange-bleu
+                move.invLeft(cube)
+                move.down(cube)
+                move.left(cube)
+                move.invDown(cube)
+                move.invLeft(cube)
+                move.down(cube)
+                move.left(cube)
 
         """ FACE ORANGE """
 
         if (cube.getCorners()[3][0] == 4): # Coin (3,0,0) blanc-?-?
             if (cube.getCorners()[4][0] == 0): # Coin (4,0,0) blanc-vert-rouge
+                move.invLeft(cube)
+                move.invDown(cube)
+                move.left(cube)
+                move.front(cube)
+                move.invDown(cube)
+                move.invFront(cube)
             if (cube.getCorners()[4][0] == 1): # Coin (4,0,0) blanc-rouge-bleu
+                move.invLeft(cube)
+                move.invDown(cube)
+                move.left(cube)
+                move.invBack(cube)
+                move.invDown(cube)
+                move.back(cube)
             if (cube.getCorners()[4][0] == 2): # Coin (4,0,0) blanc-bleu-orange
+                move.invLeft(cube)
+                move.invDown(cube)
+                move.left(cube)
+                move.down(cube)
+                move.down(cube)
+                move.back(cube)
+                move.invDown(cube)
+                move.invBack(cube)
             if (cube.getCorners()[4][0] == 3): # Coin (4,0,0) blanc-orange-vert
+                move.invLeft(cube)
+                move.invDown(cube)
+                move.left(cube)
+                move.down(cube)
+                move.down(cube)
+                move.invFront(cube)
+                move.invDown(cube)
+                move.front(cube)
         if (cube.getCorners()[3][1] == 4): # Coin (3,2,0) blanc-?-?
             if (cube.getCorners()[5][3] == 0): # Coin (5,0,2) blanc-vert-orange
             if (cube.getCorners()[5][3] == 1): # Coin (5,0,2) blanc-rouge-vert
