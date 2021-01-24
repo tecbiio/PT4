@@ -9,5 +9,5 @@
 ## Fichier PT4_RubiksCube.xlsx
 ### Regroupement de tout les mémos papiers et visualisation du Rubik's Cube plus efficace
 
-## Fichier Rapport_PT4.docx
-### Rapport technique et objectif du projet et des étapes de résolution du Rubik's Cube
+## Rapport du PT4 à l'adresse :
+https://drive.google.com/file/d/13fVbcU4BU_jz0T-xsszE8XqylJs-AX8i/view?usp=sharing
